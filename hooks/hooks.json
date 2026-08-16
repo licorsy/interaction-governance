@@ -1,0 +1,30 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node",
+            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/always-on.mjs"],
+            "timeout": 5,
+            "statusMessage": "Loading interaction standard (F1-F15)..."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3",
+            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/check-closing-format.py"],
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

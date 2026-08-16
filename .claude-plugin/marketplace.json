@@ -1,0 +1,15 @@
+{
+  "name": "interaction-governance",
+  "owner": {
+    "name": "Licorsy",
+    "url": "https://github.com/licorsy"
+  },
+  "plugins": [
+    {
+      "name": "interaction-governance",
+      "source": "./",
+      "description": "Agent response format as a single-owner convention: F1-F15, injected every session and checked at close.",
+      "category": "productivity"
+    }
+  ]
+}

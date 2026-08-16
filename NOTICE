@@ -1,0 +1,23 @@
+interaction-governance
+Copyright (c) 2026 Licorsy
+
+This product includes software developed by ayghri as part of the
+"i-have-adhd" project (https://github.com/ayghri/i-have-adhd), licensed
+under the MIT License.
+
+Derived from that project:
+
+  hooks/always-on.mjs
+      Direct port. Two deliberate changes: the opt-in flag check is removed
+      (the standard is unconditional here), and failure is loud instead of
+      silent. The file carries an attribution header.
+
+  standard/INTERACTION-STANDARD.md
+      Rules F1, F5 (step economy), F7, F9, F10, F11 and F12 are adopted or
+      adapted from that project's rules R10, R2, R9, R5, R6, R8 and R7.
+      Rules R1, R3 and R10 are deliberately overridden; the reasoning is kept
+      in skills/interaction-standard/reference/provenance.md.
+
+  evals/
+      Rubric structure (weighted dimensions, blocking findings, baseline
+      comparison) follows that project's approach.

@@ -1,0 +1,11 @@
+{
+  "name": "interaction-governance",
+  "version": "1.0.0",
+  "description": "Single owner of agent response format: rules F1-F15, injected at SessionStart and checked at Stop. Adopts, adapts or deliberately overrides the ayghri/i-have-adhd ruleset, with the reasoning for each override kept written. Also ships the tooling-catalog skill: the taxonomy of skills, plugins, subagents, commands, MCP servers and hooks, and the procedure to install, verify and remove each.",
+  "author": {
+    "name": "Licorsy",
+    "url": "https://github.com/licorsy"
+  },
+  "repository": "https://github.com/licorsy/interaction-governance",
+  "license": "MIT"
+}

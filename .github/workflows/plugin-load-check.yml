@@ -1,0 +1,52 @@
+name: plugin-load-check
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+
+jobs:
+  manifests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Manifests are valid JSON and structurally correct
+        run: |
+          node -e '
+            const fs = require("fs");
+            const fail = (m) => { console.error("FAIL: " + m); process.exitCode = 1; };
+            const plugin = JSON.parse(fs.readFileSync(".claude-plugin/plugin.json", "utf8"));
+            const market = JSON.parse(fs.readFileSync(".claude-plugin/marketplace.json", "utf8"));
+            JSON.parse(fs.readFileSync("hooks/hooks.json", "utf8"));
+            // The exact defect that blocked docs-governance on 2026-07-29.
+            if (typeof plugin.author !== "object" || plugin.author === null)
+              fail("plugin.json: author must be an object, not a string");
+            if (typeof market.owner !== "object" || market.owner === null)
+              fail("marketplace.json: owner must be an object");
+            if (!Array.isArray(market.plugins) || !market.plugins.length)
+              fail("marketplace.json: plugins[] must be a non-empty array");
+            if (!plugin.name || !plugin.version || !plugin.license)
+              fail("plugin.json: name, version and license are required");
+            if (!process.exitCode) console.log("manifests ok");
+          '
+
+      - name: Platform mirrors match the single source
+        run: node scripts/sync-platforms.mjs --check
+
+      - name: Hooks parse
+        run: |
+          node --check hooks/always-on.mjs 2>/dev/null || node -e 'import("./hooks/always-on.mjs")' >/dev/null
+          python3 -c "import ast; ast.parse(open('hooks/check-closing-format.py').read())"
+          echo "hooks ok"
+
+      - name: Standard stays within the injection budget
+        run: |
+          BYTES=$(wc -c < skills/interaction-standard/SKILL.md)
+          echo "skill: ${BYTES} bytes"
+          # Injected into every session, including scheduled runs. 6 KB is the
+          # agreed ceiling; past it, the cost stops being invisible.
+          test "$BYTES" -le 6144 || { echo "FAIL: over the 6144-byte budget"; exit 1; }
