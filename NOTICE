@@ -13,10 +13,11 @@ Derived from that project:
       silent. The file carries an attribution header.
 
   standard/INTERACTION-STANDARD.md
-      Rules F1, F5 (step economy), F7, F9, F10, F11 and F12 are adopted or
-      adapted from that project's rules R10, R2, R9, R5, R6, R8 and R7.
-      Rules R1, R3 and R10 are deliberately overridden; the reasoning is kept
-      in skills/interaction-standard/reference/provenance.md.
+      Rules F1, F9, F10 and F11 are adopted from that project's rules R10
+      (first half), R5, R6 and R8; F2, F5 (step economy), F7 and F12 are
+      adapted from R1, R2, R9 and R7. R10 (for the F13 block only) and the
+      opt-in trigger are deliberately overridden; R1 and R3 are kept. The
+      reasoning is in skills/interaction-standard/reference/provenance.md.
 
   evals/
       Rubric structure (weighted dimensions, blocking findings, baseline
