@@ -1,4 +1,4 @@
-# Interaction Standard — F1–F15
+# Interaction Standard — F1–F16
 
 Single owner of response format across Licorsy repositories. Other documents
 reference this file; they do not restate it.
@@ -63,6 +63,12 @@ issue". No apology, no self-flagellation.
 **F12 — Completed work stated concretely.** What *now works*, and how to verify
 it — not what was touched. This is the content rule for the `✅` block in F13.
 
+**F16 — Gloss a code on first mention.** The first time a non-obvious code, ID
+or abbreviation appears ("#71", "§B4", "POS.1029"), it carries a gloss of at
+most ~8 words in parentheses: "Atividade 03 (definição do tema do TCC I)". Later
+mentions go bare. Names the reader obviously knows are exempt. Source: the
+consuming repository's glossary when one exists, else context.
+
 ## Closing
 
 **F13 — Responses that close real work end with the interaction block.**
@@ -108,12 +114,14 @@ If the reader reads **only the first line and the last line**, do they know
 (a) what to do next, and (b) what just happened? If not, F2 or F13/F14 failed.
 
 Then: does the recommendation in F3 name the same option as the F14 closing
-sentence? Is there anything after the F13 block?
+sentence? Is there anything after the F13 block? Does every code carry its F16
+gloss on first mention?
 
 ## Provenance
 
-Rules F1, F5 (step economy), F7, F8, F9, F10, F11 and F12 are adopted or adapted
-from [`ayghri/i-have-adhd`](https://github.com/ayghri/i-have-adhd) (MIT). Its
-rules R1, R3 and R10 are deliberately overridden here — see
-`reference/provenance.md` for the reasoning, kept written so the override is not
+Rules F1, F9, F10 and F11 are adopted, and F2, F5 (step economy), F7 and F12
+adapted, from [`ayghri/i-have-adhd`](https://github.com/ayghri/i-have-adhd)
+(MIT). Its R10 (for the F13 block only) and its opt-in trigger are deliberately
+overridden; R1 and R3 only look like conflicts and are kept. The reasoning is in
+the skill's `reference/provenance.md`, kept written so the override is not
 rediscovered as a bug later.

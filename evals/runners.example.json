@@ -1,0 +1,15 @@
+{
+  "$comment": "Copy to runners.json and fill in. Structure follows the i-have-adhd evals; the runner invokes each case's prompt under both conditions and records the transcript for scoring.",
+  "runners": [
+    {
+      "name": "claude-code",
+      "command": "claude",
+      "args": ["-p", "{prompt}"],
+      "conditions": {
+        "baseline": "Prepend: 'formato normal — ignore o padrão de interação nesta sessão.'",
+        "candidate": "No prefix; the SessionStart hook injects the standard."
+      },
+      "trials": 1
+    }
+  ]
+}
