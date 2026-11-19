@@ -15,7 +15,7 @@ inventory.
 | Kind | Lives in | Triggered by | Sees the conversation? |
 |---|---|---|---|
 | **Skill** | `~/.claude/skills/<n>/SKILL.md` (user) · `.claude/skills/` (project) · plugin | model-invoked from its `description`, or `/name` | yes — loads into the current context |
-| **Plugin** | `~/.claude/plugins/` via a marketplace | n/a — a container for the five below | — |
+| **Plugin** | `~/.claude/plugins/` via a marketplace | n/a — a container for the other six kinds | — |
 | **Subagent** | `~/.claude/agents/*.md` · `.claude/agents/` · plugin | dispatched by the main agent | no — fresh context, returns a result |
 | **Command** | `commands/` in a plugin, or `.claude/commands/` | `/name` typed by the user | yes |
 | **MCP server** | configured in `~/.claude.json` or project config | tool call | tool results only |
