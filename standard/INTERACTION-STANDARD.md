@@ -1,4 +1,4 @@
-# Interaction Standard — F1–F15
+# Interaction Standard — F1–F16
 
 Single owner of response format across Licorsy repositories. Other documents
 reference this file; they do not restate it.
@@ -63,6 +63,12 @@ issue". No apology, no self-flagellation.
 **F12 — Completed work stated concretely.** What *now works*, and how to verify
 it — not what was touched. This is the content rule for the `✅` block in F13.
 
+**F16 — Gloss a code on first mention.** The first time a non-obvious code, ID
+or abbreviation appears ("#71", "§B4", "POS.1029"), it carries a gloss of at
+most ~8 words in parentheses: "Atividade 03 (definição do tema do TCC I)". Later
+mentions go bare. Names the reader obviously knows are exempt. Source: the
+consuming repository's glossary when one exists, else context.
+
 ## Closing
 
 **F13 — Responses that close real work end with the interaction block.**
@@ -108,7 +114,8 @@ If the reader reads **only the first line and the last line**, do they know
 (a) what to do next, and (b) what just happened? If not, F2 or F13/F14 failed.
 
 Then: does the recommendation in F3 name the same option as the F14 closing
-sentence? Is there anything after the F13 block?
+sentence? Is there anything after the F13 block? Does every code carry its F16
+gloss on first mention?
 
 ## Provenance
 

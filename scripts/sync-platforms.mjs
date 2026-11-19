@@ -24,7 +24,7 @@ const TARGETS = [
     frontmatter: [
       "---",
       "name: interaction-standard",
-      "description: The F1-F15 response-format standard. Loaded automatically at" +
+      "description: The F1-F16 response-format standard. Loaded automatically at" +
         " SessionStart by this plugin's hook and applied to every response;" +
         " invoke it directly to re-read the rules, settle a formatting question," +
         " or check a draft reply against the pre-send check.",
