@@ -15,7 +15,7 @@ inventory.
 | Kind | Lives in | Triggered by | Sees the conversation? |
 |---|---|---|---|
 | **Skill** | `~/.claude/skills/<n>/SKILL.md` (user) · `.claude/skills/` (project) · plugin | model-invoked from its `description`, or `/name` | yes — loads into the current context |
-| **Plugin** | `~/.claude/plugins/` via a marketplace | n/a — a container for the six below | — |
+| **Plugin** | `~/.claude/plugins/` via a marketplace | n/a — a container for the five below | — |
 | **Subagent** | `~/.claude/agents/*.md` · `.claude/agents/` · plugin | dispatched by the main agent | no — fresh context, returns a result |
 | **Command** | `commands/` in a plugin, or `.claude/commands/` | `/name` typed by the user | yes |
 | **MCP server** | configured in `~/.claude.json` or project config | tool call | tool results only |
@@ -31,9 +31,11 @@ model-invoked, the same ladder `docs-governance` applies to document checks.
 
 ## Traps, each one measured rather than assumed
 
-1. **Plugin installation is per machine, not per repository.** Plugins live in
+1. **The plugin cache is per machine, not per repository.** Plugins live in
    `~/.claude/plugins/`. Updating one from inside repository A updates it for
-   repository B too. There is no per-repo pin.
+   repository B too; there is no per-repo version pin. What a repository can
+   control is *enablement*: its `.claude/settings.json` `enabledPlugins` (which
+   `git-governance` scaffolds) turns a plugin on there.
 2. **A newly installed skill does not appear in an already-open session.** The
    skill listing is built at session start. Update, then open a new session.
 3. **A plugin's `plugin.json` needs `author` as an object, not a string.** A

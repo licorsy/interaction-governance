@@ -119,8 +119,9 @@ sentence? Is there anything after the F13 block?
 
 ## Provenance
 
-Rules F1, F5 (step economy), F7, F8, F9, F10, F11 and F12 are adopted or adapted
-from [`ayghri/i-have-adhd`](https://github.com/ayghri/i-have-adhd) (MIT). Its
-rules R1, R3 and R10 are deliberately overridden here — see
-`reference/provenance.md` for the reasoning, kept written so the override is not
+Rules F1, F9, F10 and F11 are adopted, and F2, F5 (step economy), F7 and F12
+adapted, from [`ayghri/i-have-adhd`](https://github.com/ayghri/i-have-adhd)
+(MIT). Its R10 (for the F13 block only) and its opt-in trigger are deliberately
+overridden; R1 and R3 only look like conflicts and are kept. The reasoning is in
+the skill's `reference/provenance.md`, kept written so the override is not
 rediscovered as a bug later.
