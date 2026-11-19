@@ -33,7 +33,7 @@ Then open a **new session** — the skill listing is built at session start.
 
 | Component | Kind | Effect |
 |---|---|---|
-| `interaction-standard` | skill | The F1–F15 rules |
+| `interaction-standard` | skill | The F1–F16 rules |
 | `always-on.mjs` | SessionStart hook | Injects the rules into every session |
 | `check-closing-format.py` | Stop hook | Blocks the one recurring closing defect |
 | `tooling-catalog` | skill | Taxonomy and procedure for agent tooling |
@@ -42,7 +42,7 @@ Then open a **new session** — the skill listing is built at session start.
 ## The standard
 
 [`standard/INTERACTION-STANDARD.md`](standard/INTERACTION-STANDARD.md) is the
-**single source**. Fifteen rules in four groups — opening, body, closing,
+**single source**. Sixteen rules in four groups — opening, body, closing,
 language — plus a pre-send check.
 
 Eight rules are adopted (four) or adapted (four) from

@@ -8,7 +8,7 @@
     {
       "name": "interaction-governance",
       "source": "./",
-      "description": "Agent response format as a single-owner convention: F1-F15, injected every session and checked at close.",
+      "description": "Agent response format as a single-owner convention: F1-F16, injected every session and checked at close.",
       "category": "productivity"
     }
   ]

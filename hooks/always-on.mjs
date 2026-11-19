@@ -1,4 +1,4 @@
-// SessionStart hook: injects the interaction standard (F1-F15) into every
+// SessionStart hook: injects the interaction standard (F1-F16) into every
 // session. Always on — there is no opt-in flag, because this is the norm, not a
 // mode.
 //
@@ -48,7 +48,7 @@ try {
   }
 
   process.stdout.write(
-    "INTERACTION STANDARD ACTIVE (F1-F15). The ruleset below applies to every " +
+    "INTERACTION STANDARD ACTIVE (F1-F16). The ruleset below applies to every " +
       "response in this session. A scheduled routine follows the literal " +
       "template of its own prompt instead (F13.c).\n\n" +
       `${body}\n`,
